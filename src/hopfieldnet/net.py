@@ -57,7 +57,7 @@ class HopfieldNetwork(object):
         result = input_pattern.copy()
 
         while True:
-            update_list = range(self._num_inputs)
+            update_list = list(range(self._num_inputs))
             shuffle(update_list)
 
             changed, result = self.run_once(update_list, result)
